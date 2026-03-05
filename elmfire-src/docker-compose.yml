@@ -1,0 +1,16 @@
+services:
+  elmfire:
+    container_name: client
+    hostname: client
+    image: ghcr.io/lautenberger/elmfire   # pre-built image; run: docker pull ghcr.io/lautenberger/elmfire
+    build: .                               # fallback: build locally with: docker compose build
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    working_dir: /elmfire/elmfire
+    entrypoint: bash
+    volumes:
+      - ./docker_shared_folder:/elmfire/elmfire/docker_shared_folder
+      - ./cloudfire:/elmfire/elmfire/cloudfire          # mount live so fixes apply without rebuild
+      - ./run_california.sh:/elmfire/elmfire/run_california.sh
+    environment:
+      - USE_SLURM=no
