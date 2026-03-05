@@ -47,3 +47,12 @@ validation/02-multi-fire/2*
 ask_rag.py
 index_repo.py
 rag_db
+
+# Allow simulation outputs folder
+!docker_shared_folder/simulation/
+!docker_shared_folder/simulation/inputs/
+!docker_shared_folder/simulation/inputs/**
+!docker_shared_folder/simulation/outputs/
+!docker_shared_folder/simulation/outputs/**
+!docker_shared_folder/simulation/scratch/
+!docker_shared_folder/simulation/scratch/**
