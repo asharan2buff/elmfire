@@ -41,7 +41,6 @@ log.txt
 runs/hindcasts/runs
 runs/forecasts/archive
 **/.DS_Store
-docker_shared_folder/simulation/
 validation/02-multi-fire/2*
 .webui_secret_key
 .rag_db
